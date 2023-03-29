@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
 <suite name="Opencart App Test Regression Suite" thread-count="4"
 	parallel="tests" verbose="4">
@@ -15,17 +14,36 @@
 			class-name="com.qa.opencart.listeners.AnnotationTransformer" />
 	</listeners>
 
-	<test name="Login Page Test">
+	<test name="Login Page Test_chrome_90.0">
+	<parameter name="browser" value="chrome" />
+	<parameter name="browserversion" value="90.0" />
+	<parameter name="testcasename" value="login page test" />
+		<classes>
+			<class name="com.qa.opencart.tests.LoginPageTest" />
+		</classes>
+	</test>
+	
+		<test name="Login Page Test_chrome_79.0">
+	<parameter name="browser" value="chrome" />
+	<parameter name="browserversion" value="79.0" />
+	<parameter name="testcasename" value="login page test" />
 		<classes>
 			<class name="com.qa.opencart.tests.LoginPageTest" />
 		</classes>
 	</test>
 
-	<test name="Accounts Page Test">
+
+	
+	<test name="Accounts Page Test_chrome_109.0">
+	<parameter name="browser" value="chrome" />
+	<parameter name="browserversion" value="109.0" />
+	<parameter name="testcasename" value="Account page test" />
 		<classes>
 			<class name="com.qa.opencart.tests.AccountsPageTest" />
 		</classes>
 	</test>
+	
+
 
 	<!-- <test name="Product Info Page Test"> <classes> <class name="com.qa.opencart.tests.ProductPageInfoTest" 
 		/> </classes> </test> <test name="Register Page Test"> <classes> <class name="com.qa.opencart.tests.RegisterPageTest" 
