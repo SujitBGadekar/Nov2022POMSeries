@@ -37,6 +37,7 @@ public class BaseTest {
 	public void setup(String browserName, String browserversion, String testCaseName ) {
 		df = new DriverFactory();
 		prop = df.initProp();
+		int i=10;
 		
 		if(browserName!=null)
 		{
